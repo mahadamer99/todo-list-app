@@ -17,6 +17,28 @@ body{
     font-family: Roboto;
 }
 
+body{
+    background: #304352;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #d7d2cc, #304352);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #d7d2cc, #304352); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+span{
+    background: #e74c3c;
+    display: inline-block;
+    margin-right: 20px;
+    color: white;
+    text-align: center;
+    width: 0px;
+    transition: 0.2s linear;
+    opacity: 0;
+}
+
+li:hover span{
+    width:40px;
+    opacity: 1.0;
+}
+
 li{
     background: #fff;
     height: 40px;
@@ -30,10 +52,12 @@ li:nth-child(2n){
 
 input{
     font-size: 18px;
+    color:#2980b9;
     width: 100%;
     background: #f7f7f7;
     padding: 13px 13px 13px 20px;
     box-sizing: border-box;
+    border: 3px solid rgba(0,0,0,0);
 }
 
 input:focus{
@@ -45,11 +69,16 @@ input:focus{
 #container{
     width: 360px;
     background: #f7f7f7;
-    margin: 50px auto;
+    margin: 100px auto;
     box-shadow: 0 0 3px rgba(0,0,0,0.1);
 }
 
 .completed{
     color: gray;
     text-decoration: line-through;
+}
+
+.fa-plus{
+    float:right;
+    font-size: 2px;
 }
